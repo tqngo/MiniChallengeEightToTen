@@ -3,57 +3,40 @@ using Microsoft.AspNetCore.Mvc;
 namespace MiniChallengeEightToTen.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class RestaurantPickerController : ControllerBase
 {
+    public List<string> Korean = new() { "10 Butchers", "Yogi Korean BBQ", "Han Sung BBQ", "Seoul Soon Dobu", "Goku Korean BBQ and Hot Pot", "Oz Korean", "Daikon Korean BBQ", "Blue House Korean BBQ", "Bullta K - BBQ & Club", "Gen Korean BBQ" };
 
+    public List<string> Sushi = new() { "Mikuni's", "M Bistro", "Komachi", "Raw", "Domo Japanese Grill & Bar", "Shirasoni Japanese Restaurant", "Fuji Sushi", "Cocoro Bistro Sushi Bar", "Misaki Sushi & Bar", "Shomi Japanese Cuisine" };
+
+    public List<string> FastFood = new() { "Wingstop", "Jack-In-The-Box", "In-N-Out Burger", "Raising Cane's Chicken Fingers", "Chik-Fil-A", "Frosty's Burgers", "Popeyes Louisiana Kitchen", "Sonic's Drive-In", "Taco Bell", "Wendy's" };
+
+    public Random resRan = new Random();
+
+    [HttpGet]
+    [Route("category/{category}")]
+    public string Food(string category)
+    {
+        if (category.ToLower() == "sushi")
+        {
+            
+            return Sushi[resRan.Next(1, 11)];
+        }
+        if (category.ToLower() == "fast food")
+        {
+            return FastFood[resRan.Next(1, 11)];
+        }
+        if (category.ToLower() == "korean")
+        {
+            return Korean[resRan.Next(1, 11)];
+        }
+        else
+        {
+            return "invalid food category. Please enter Sushi, FastFood, or Korean";
+        }
+    }
 }
-
-
-// bool playAgain = true;
-// while (playAgain)
-// {
-//     Random restaurant = new Random();
-//     restaurant = new Random();
-//     int sushiFood = restaurant.Next(0, 10);
-//     string[] sushi = new string[10];
-
-//     sushi[0] = "Mikuni's";
-//     sushi[1] = "M Bistro";
-//     sushi[2] = "Komachi";
-//     sushi[3] = "Raw";
-//     sushi[4] = "Domo Japanese Grill & Bar";
-//     sushi[5] = "Shirasoni Japanese Restaurant";
-//     sushi[6] = "Fuji Sushi";
-//     sushi[7] = "Cocoro Bistro Sushi Bar";
-//     sushi[8] = "Misaki Sushi & Bar";
-//     sushi[9] = "Shomi Japanese Cuisine";
-
-//     int koreanFood = restaurant.Next(0, 10);
-//     string[] korean = new string[10];
-//     korean[0] = "10 Butchers";
-//     korean[1] = "Yogi Korean BBQ";
-//     korean[2] = "Han Sung BBQ";
-//     korean[3] = "Seoul Soon Dobu";
-//     korean[4] = "Goku Korean BBQ and Hot Pot";
-//     korean[5] = "Oz Korean";
-//     korean[6] = "Daikon Korean BBQ";
-//     korean[7] = "Blue House Korean BBQ";
-//     korean[8] = "Bullta K - BBQ & Club";
-//     korean[9] = "Gen Korean BBQ";
-
-//     int fastF = restaurant.Next(0, 10);
-//     string[] fastFood = new string[10];
-//     fastFood[0] = "WingStop";
-//     fastFood[1] = "Jack-N-The Box";
-//     fastFood[2] = "In-N-Out Burger";
-//     fastFood[3] = "Raising Cane's Chicken Fingers";
-//     fastFood[4] = "Chik-Fil-A";
-//     fastFood[5] = "Frosty's Burgers";
-//     fastFood[6] = "Popeyes Louisiana Kitchen";
-//     fastFood[7] = "Sonic's Drive ";
-//     fastFood[8] = "Taco Bell";
-//     fastFood[9] = "Wendy's";
 
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sszL6xets3ymvdW8A5nKq3hRJLt3dHu8iE2+tRyrT0zfMJ+H3AL3w3KQ8lwEmkzHnY8jg53KdInMC1z9CUz3bA==",
+  "dgSpecHash": "2kWmfBcAsZvaFheaPPn4efk+j8pKCk49ylVlyYNjaWa88g+Z+cSZMLfsnKKP9cQqYrUDbyG3GpqQ4NlfBGA3hw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tommy\\Desktop\\CodeStack Academy 23-24\\Challenges\\MiniChallengeEightToTen\\MiniChallengeEightToTen.csproj",
+  "projectFilePath": "C:\\Users\\tommy\\Desktop\\CodeStack\\GitRepo\\MiniChallenge8-10\\MiniChallengeEightToTen\\MiniChallengeEightToTen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tommy\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "C:\\Users\\tommy\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
