@@ -30,7 +30,7 @@ public class RestaurantPickerService : IRestaurantPickerService
         }
         else
         {
-            return "invalid food category. Please enter Sushi, Fast Food, or Korean";
+            return "Invalid food category. Please enter Sushi, Fast Food, or Korean";
         }
     }
 }
